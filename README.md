@@ -24,25 +24,36 @@ MacOS & Linux
 # apt
 Debian family
 
-- apt update && apt upgrade -y
-- apt install mysql
-
 # yum
 Cent OS family
 
 # apk
 Alpine Linux
 
-# Apache Maven
+# pip
+python
+
+# composer
+php
+
+# Maven
+java
+
+# gradle
+java
 
 # RubyGems
+ruby
 
 # NuGet
+.net
 
 # npm
+javascript
 
 # Docker
 
 # vcpkg
+C++
 
 # huggingface
