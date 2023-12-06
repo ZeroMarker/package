@@ -30,6 +30,8 @@ Cent OS family
 # apk
 Alpine Linux
 
+apk add
+
 # pip
 python
 
