@@ -1,5 +1,5 @@
 # life
-winget install Google.Chrome Google.GoogleDrive Thunder.Thunder MEGAsync Baidu.BaiduNetdisk iQIYI.GeePlayer SumatraPDF SiYuan -y
+winget install Google.Chrome Google.GoogleDrive Thunder.Thunder MEGAsync Baidu.BaiduNetdisk iQIYI.GeePlayer SumatraPDF -y
 # db
 winget install MySQL MongoDB.Compass.Full MongoDB PostgreSQL.PostgreSQL Microsoft.SQLServer.2022.Express -y
 # ide
