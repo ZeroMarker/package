@@ -10,3 +10,4 @@ https://github.com/adnanmasood/WebServiceStudio
 
 https://multigo.software.informer.com/4.4/
 
+https://www.angusj.com/resourcehacker/

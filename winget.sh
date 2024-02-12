@@ -12,7 +12,7 @@ winget install Google.JapaneseIME Rime.Weasel -y
 # tool
 winget install Bandizip GoldenDict JAMSoftware.TreeSize.Free ToDesk GeekUninstaller.GeekUninstaller carnac -y
 winget install 'Clash Verge' Notepad++ DiskGenius Listary Microsoft.PowerToys NickeManarin.ScreenToGif -y
-winget install ffmpeg -y
+winget install ffmpeg Telerik.Fiddler.Classic -y
 # dev
 winget install Git 'GitHub Desktop' DBeaver Ubuntu Microsoft.DevHome Microsoft.WindowsTerminal Node.js -y
 winget install VMware.WorkstationPlayer Oracle.VirtualBox NxShell vscode -y
