@@ -59,3 +59,7 @@ javascript
 C++
 
 # huggingface
+
+# cargo
+rust
+

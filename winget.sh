@@ -1,27 +1,18 @@
-# life
-winget install Google.Chrome Google.GoogleDrive Thunder.Thunder MEGAsync Baidu.BaiduNetdisk iQIYI.GeePlayer SumatraPDF 
-winget install Listen1 
-# db
-winget install MySQL MongoDB.Compass.Full MongoDB PostgreSQL.PostgreSQL Microsoft.SQLServer.2022.Express 
-# ide
-winget install JetBrains.Toolbox 
-# sns
-winget install QQ WeChat Tencent.WeCom Tencent.TencentMeeting 
-# ime
-winget install Google.JapaneseIME Rime.Weasel 
-# tool
-winget install Bandizip GoldenDict JAMSoftware.TreeSize.Free ToDesk GeekUninstaller.GeekUninstaller carnac 
-winget install 'Clash Verge' Notepad++ DiskGenius Listary Microsoft.PowerToys NickeManarin.ScreenToGif 
-winget install ffmpeg Telerik.Fiddler.Classic 
-# dev
-winget install Git 'GitHub Desktop' DBeaver Ubuntu Microsoft.DevHome Microsoft.WindowsTerminal Node.js 
-winget install VMware.WorkstationPlayer Oracle.VirtualBox NxShell vscode 
-winget install 'Docker Desktop' GitHub.cli Apifox Postman 
-# sys
-winget install 'Sysinternals Suite' 
-winget install Autoruns 
-winget install 'Process Explorer' 
+winget install --id Microsoft.Powershell --source winget
 
-# init
-winget install Google.Chrome DBeaver vscode git 'GitHub Desktop' 'Clash Verge' JetBrains.Toolbox Tencent.QQ.NT WeChat NxShell Bandizip Notepad++ Everything ToDesk 'Geek Uninstaller' 'Windows Terminal' 
-winget install Microsoft.PowerToys 
+winget search everything
+
+winget install notepad++ -l d:/notepad++
+
+winget install notepad++ -i
+interactive
+
+winget uninstall notepad++
+
+winget list
+
+winget show 'docker desktop'
+
+winget source remove winget
+
+winget source add winget https://mirrors.ustc.edu.cn/winget-source
