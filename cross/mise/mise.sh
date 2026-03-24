@@ -21,3 +21,4 @@ source ~/.bashrc
 
 # 添加激活行（注意用 pwsh，不是 powershell）
 Add-Content -Path $PROFILE -Value '(&mise activate pwsh) | Out-String | Invoke-Expression'
+
