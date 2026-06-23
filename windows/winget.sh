@@ -1,18 +1,23 @@
-winget install --id Microsoft.Powershell --source winget
+#!/usr/bin/env bash
+set -euo pipefail
 
-winget search everything
+if ! command -v winget >/dev/null 2>&1; then
+  echo "winget is not available. Run this script on Windows with App Installer enabled." >&2
+  exit 1
+fi
 
-winget install notepad++ -l d:/notepad++
+winget install --id Microsoft.PowerShell --source winget
 
-winget install notepad++ -i
-interactive
+cat <<'EOF'
 
-winget uninstall notepad++
+Useful winget commands:
 
-winget list
-
-winget show 'docker desktop'
-
-winget source remove winget
-
-winget source add winget https://mirrors.ustc.edu.cn/winget-source
+  winget search everything
+  winget install Notepad++.Notepad++ --location d:/notepad++
+  winget install Notepad++.Notepad++ --interactive
+  winget uninstall Notepad++.Notepad++
+  winget list
+  winget show "Docker.DockerDesktop"
+  winget source remove winget
+  winget source add winget https://mirrors.ustc.edu.cn/winget-source
+EOF

@@ -1,5 +1,11 @@
-winget install erlang.erlangotp
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
 
-winget install gleam.gleam
+winget install --id erlang.erlangotp --source winget --accept-package-agreements --accept-source-agreements
+winget install --id gleam.gleam --source winget --accept-package-agreements --accept-source-agreements
 
-choco install elixir
+if (Get-Command choco -ErrorAction SilentlyContinue) {
+    choco install elixir -y
+} else {
+    Write-Warning 'Chocolatey is not installed. Install Elixir manually or install Chocolatey first: https://chocolatey.org/install'
+}

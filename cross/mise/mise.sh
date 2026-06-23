@@ -1,24 +1,30 @@
-winget install jdx.mise
-curl https://mise.run | sh
+#!/usr/bin/env bash
+set -euo pipefail
+
+if ! command -v mise >/dev/null 2>&1; then
+  curl -fsSL https://mise.run | sh
+fi
+
+if [ -n "${BASH_VERSION:-}" ] && [ -f "$HOME/.bashrc" ]; then
+  activate_line='eval "$(mise activate bash)"'
+  if ! grep -Fqx "$activate_line" "$HOME/.bashrc"; then
+    printf '\n%s\n' "$activate_line" >>"$HOME/.bashrc"
+  fi
+fi
 
 mise install java@21
-mise use java@17  # 当前目录生效
-# 或全局：mise use -g java@21
-
+mise use -g java@21
 mise ls java
-# 或更通用写法（显示所有工具，但会过滤出 java）
-mise ls
+mise ls-remote java | grep -i temurin || true
 
-mise ls-remote java
+cat <<'EOF'
 
-mise ls-remote java | grep temurin     # 只看 Temurin（最推荐的免费开源发行版）
-mise ls-remote java | grep 21          # 所有 21.x 版本
-mise ls-remote java | fzf              # 用 fzf 交互搜索（超级方便！先 brew install fzf 或类似安装）
-# findstr
+Windows installation:
 
-echo 'eval "$(mise activate bash)"' >> ~/.bashrc
-source ~/.bashrc
+  winget install --id jdx.mise --source winget
 
-# 添加激活行（注意用 pwsh，不是 powershell）
-Add-Content -Path $PROFILE -Value '(&mise activate pwsh) | Out-String | Invoke-Expression'
+PowerShell activation:
+
+  Add-Content -Path $PROFILE -Value '(&mise activate pwsh) | Out-String | Invoke-Expression'
+EOF
 

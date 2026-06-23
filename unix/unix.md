@@ -1,12 +1,22 @@
 # Unix
 
-## Red Hat
+Common package managers by distribution family.
 
-- yum
-- dnf
+## Debian / Ubuntu
 
-## Debian
+- `apt`
+- `snap`
 
-- apt
-- snap
+## Fedora / RHEL / CentOS
+
+- `dnf`
+- `yum`
+
+## Alpine
+
+- `apk`
+
+## macOS / Linux
+
+- `brew`
 
